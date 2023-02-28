@@ -267,6 +267,70 @@ summary {
   margin: 0 auto;
 }
 
+
+/* ------ OPTIONS SECTION ------ */
+
+.options {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 4rem;
+  display: flex;
+  gap: 3rem;
+}
+
+.options__card {
+  display: flex;
+  gap: 3rem;
+}
+
+.options__content {
+  flex: 1;
+  padding: 2rem;
+  border: 3px solid var(--main-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.options__content--title {
+  color: var(--black);
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
+  line-height: 1.1;
+
+}
+
+.options__img {
+  height: 100%;
+  flex: 1;
+}
+
+.options__img img {
+  height: 100%;
+}
+
+.options__content--text {
+  color: var(--second-color);
+  font-size: 1.4;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.options__img.img__1 {
+  background-image: url(/images/us.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.options__img.img__2 {
+  background: url(/images/us-2.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /* ------ RESPONSIVE SECTION ------ */
 
 @media screen and (max-width: 992px) {
@@ -282,6 +346,13 @@ summary {
   .ideas__card--text {
     font-size: 1.2rem;
   }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+
+
 }
 
 @media screen and (max-width: 768px) {
@@ -358,6 +429,14 @@ summary {
 
   .ideas__container {
     grid-template-columns: 1fr;
+  }
+
+  .options {
+    padding: 6rem 2rem;
+  }
+
+  .options__card {
+    flex-direction: column;
   }
 
 }
