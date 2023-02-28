@@ -162,6 +162,47 @@ summary {
   font-family: "Open Sans", sans-serif;
 }
 
+/* ------ GALLERY SECTION ------ */
+
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.gallery__title {
+  font-family: Roboto, sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--black);
+  text-align: center;
+}
+
+.gallery__text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--second-color);
+  text-align: center;
+}
+
+.gallery__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.gallery__img {
+}
+
+.gallery__img img {
+  height: 100%;
+}
+
 /* ------ RESPONSIVE SECTION ------ */
 
 @media screen and (max-width: 992px) {
@@ -184,6 +225,13 @@ summary {
     padding: 1.5rem;
   }
 
+  .gallery {
+    padding: 6rem 2rem;
+  }
+
+  .gallery__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -197,6 +245,19 @@ summary {
 
   .info__card {
     margin-top: initial;
+  }
+
+  .gallery__container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery__img {
+    height: 300px;
+  }
+  .gallery__img img {
+    background-size: contain;
+    height: 100%;
+    width: 100%;
   }
 }
 
