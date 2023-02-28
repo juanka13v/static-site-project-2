@@ -196,16 +196,92 @@ summary {
   gap: 1rem;
 }
 
-.gallery__img {
-}
-
 .gallery__img img {
   height: 100%;
+}
+
+/* ------ IDEAS SECTION ------ */
+
+.ideas {
+  width: 100%;
+  background-color: var(--baclground-color);
+}
+
+.ideas__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.ideas__title {
+  text-align: center;
+  color: var(--black);
+  font-family: Roboto, sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: capitalize;
+}
+
+.ideas__text {
+  text-align: center;
+  color: var(--second-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.ideas__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.ideas__card {
+  border: 3px solid var(--main-color);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.ideas__card--title {
+  color: var(--black);
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.ideas__card--text {
+  color: var(--second-color);
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ideas__btn {
+  margin: 0 auto;
 }
 
 /* ------ RESPONSIVE SECTION ------ */
 
 @media screen and (max-width: 992px) {
+
+  .ideas__card {
+    gap: 2rem;
+  }
+
+  .ideas__card--title {
+    font-size: 2rem;
+  }
+  
+  .ideas__card--text {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -231,6 +307,18 @@ summary {
 
   .gallery__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ideas__wrapper {
+    padding: 6rem 2rem;
+  }
+
+  .ideas__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ideas__card--text {
+    font-size: 1.4rem;
   }
 }
 
@@ -259,6 +347,19 @@ summary {
     height: 100%;
     width: 100%;
   }
+
+  .ideas__title {
+    font-size: 3.5rem;
+  }
+
+  .ideas__text {
+    font-size: 1.6rem;
+  }
+
+  .ideas__container {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 @media screen and (max-width: 480px) {
