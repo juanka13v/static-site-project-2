@@ -229,7 +229,7 @@ summary {
 .ideas__text {
   text-align: center;
   color: var(--second-color);
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.1;
@@ -267,7 +267,6 @@ summary {
   margin: 0 auto;
 }
 
-
 /* ------ OPTIONS SECTION ------ */
 
 .options {
@@ -298,43 +297,90 @@ summary {
   font-weight: 700;
   font-family: Roboto, sans-serif;
   line-height: 1.1;
-
 }
 
 .options__img {
-  height: 100%;
   flex: 1;
-}
-
-.options__img img {
-  height: 100%;
 }
 
 .options__content--text {
   color: var(--second-color);
   font-size: 1.4;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
 .options__img.img__1 {
-  background-image: url(/images/us.jpeg);
+  background-image: url(./images/us.jpeg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 200px;
 }
 .options__img.img__2 {
-  background: url(/images/us-2.jpeg);
+  background: url(./images/us-2.jpeg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 200px;
 }
+
+/* ------ HEALTH SECTION ------ */
+
+.health {
+  background: var(--baclground-color);
+  width: 100%;
+  display: flex;
+}
+
+.health__img {
+  flex: 1;
+  background-image: url(./images/about.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+  position: relative;
+}
+
+.health__content {
+  padding: 6rem 4rem;
+  flex: 1;
+}
+
+.health__wrapper {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.health__title {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.1;
+  color: var(--black);
+}
+
+.health__text {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 400;
+  font-size: 1.5rem;
+  color: var(--second-color);
+}
+
+.health__wrapper .btn {
+  margin-top: 3rem;
+}
+
+
+
 
 /* ------ RESPONSIVE SECTION ------ */
 
 @media screen and (max-width: 992px) {
-
   .ideas__card {
     gap: 2rem;
   }
@@ -342,7 +388,7 @@ summary {
   .ideas__card--title {
     font-size: 2rem;
   }
-  
+
   .ideas__card--text {
     font-size: 1.2rem;
   }
@@ -351,8 +397,6 @@ summary {
     display: flex;
     flex-direction: column;
   }
-
-
 }
 
 @media screen and (max-width: 768px) {
@@ -390,6 +434,14 @@ summary {
 
   .ideas__card--text {
     font-size: 1.4rem;
+  }
+
+  .health {
+    flex-direction: column;
+  }
+
+  .health__img {
+    min-height: 300px;
   }
 }
 
@@ -438,8 +490,18 @@ summary {
   .options__card {
     flex-direction: column;
   }
-
 }
 
 @media screen and (max-width: 480px) {
+  .health__content {
+    padding: 6rem 2rem;
+  } 
+
+  .health__title {
+    font-size: 3rem;
+  }
+
+  .health__text {
+    font-size: 1.5rem;
+  }
 }
